@@ -1,1 +1,1 @@
-(Page) [https://andrewhoncharenko.github.io/cssstyle/]
+[Page](https://andrewhoncharenko.github.io/cssstyle/)
