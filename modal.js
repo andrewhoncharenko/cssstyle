@@ -8,7 +8,6 @@ window.addEventListener("load", function() {
     if(noButton) {
         noButton.addEventListener("click", closeModal);
     }
-    console.log(menuButton);
     menuButton.addEventListener("click", showMenu);
     for(let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", confirmSelectPlanModal);
