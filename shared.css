@@ -34,11 +34,9 @@ main {
   background: #2ddf5c;
   padding: 0.5rem 1rem;
   z-index: 1;
-}
-
-.main-header > div {
-  display: inline-block;
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: left;
 }
 
 .toggle-button {
@@ -48,7 +46,6 @@ main {
   cursor: pointer;
   padding-top: 0;
   padding-bottom: 0;
-  vertical-align: middle;
 }
 
 .toggle-button:focus {
@@ -67,13 +64,10 @@ main {
   color: #0e4f1f;
   text-decoration: none;
   font-weight: bold;
-  height: 2.5rem;
-  display: inline-block;
-  vertical-align: middle;
 }
 
 .main-header__brand img {
-  height: 100%;
+  height: 2.5rem;
 }
 
 .main-nav {
@@ -84,10 +78,10 @@ main {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
 }
 
 .main-nav__item {
-  display: inline-block;
   margin: 0 1rem;
 }
 
@@ -133,11 +127,13 @@ main {
   margin: 0;
   padding: 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .main-footer__link {
-  display: block;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 }
 
 .main-footer__link a {
@@ -164,9 +160,13 @@ main {
   width: 90%;
   height: 100%;
   list-style: none;
-  margin: 10% auto;
+  margin: 0 auto;
   padding: 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .mobile-nav__item {
@@ -210,21 +210,24 @@ main {
 }
 
 @media (min-width: 40rem) {
+  .main-header {
+    justify-content: space-between;
+  }
+
   .toggle-button {
     display: none;
   }
 
   .main-nav {
-    display: inline-block;
-    text-align: right;
-    width: calc(100% - 44px);
-    vertical-align: middle;
+    display: flex;
   }
-}
 
-@media (min-width: 40rem) {
+  .main-footer__links {
+    flex-direction: row;
+    justify-content: center;
+  }
+
   .main-footer__link {
-    display: inline-block;
     margin: 0 1rem;
   }
 }

@@ -73,7 +73,7 @@ main {
     border: 1px solid #0e4f1f;
     color: #0e4f1f;
     background: white;
-    font: 700 1.2rem/2 "AnonimousPro", sans-serif;
+    font-size: 1.2rem;
 }
 
 .clearfix {
