@@ -1,3 +1,5 @@
+
+
 window.addEventListener("load", function() {
     const buttons = document.querySelectorAll(".plan .button");
     const backdrop = document.querySelector(".backdrop");
@@ -20,13 +22,14 @@ function confirmSelectPlanModal() {
 
     backdrop.classList.remove("close");
     modal.classList.remove("close");
+    modal.classList.add("open");
 }
 
 function closeModal() {
     const modal = document.querySelector(".modal");
 
     if(modal) {
-        modal.classList.add("close");
+        modal.classList.remove("open");
     }
     closeMenu();
 }
@@ -37,6 +40,9 @@ function showMenu() {
 
     backdrop.classList.remove("close");
     menu.classList.remove("close");
+    setTimeout(() => {
+        menu.classList.add("menuopen");
+    }, 10);
 }
 
 function closeMenu() {
@@ -44,5 +50,8 @@ function closeMenu() {
     const menu = document.querySelector(".mobile-nav");
 
     backdrop.classList.add("close");
-    menu.classList.add("close");
+    menu.classList.remove("menuopen");
+    setTimeout(() => {
+        menu.classList.add("close");
+    }, 500);
 }
